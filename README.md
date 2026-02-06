@@ -5,7 +5,7 @@ LLM-as-a-Judge パターンによる LLM 出力品質評価フレームワーク
 ## 機能
 
 - **3つのユースケース**: 会話要約、レポート生成、レポートQA
-- **2つのJudgeプロバイダ**: OpenAI (GPT-4o) / Google Gemini
+- **2つのJudgeプロバイダ**: OpenAI / Google Gemini (デフォルト: GPT-4o / Gemini 1.5 Pro)
 - **11評価観点**: コア9観点 + 任意2観点、1/3/5スコアアンカー付き
 - **反長文バイアス**: 3層防御（ルーブリックアンカー、プロンプト指示、機械的ペナルティ）
 - **Format Gate**: Judge応答のJSON Schemaバリデーション
