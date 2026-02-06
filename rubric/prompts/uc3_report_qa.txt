@@ -16,7 +16,9 @@ REFERENCE ANSWER (for comparison):
 AI-GENERATED ANSWER:
 {{generated_text}}
 
-Evaluate this answer on each criterion below. For each criterion, assign a score (1-5) and provide specific reasoning.
+Evaluate this answer on each criterion below. For each criterion, assign an integer score from 1 to 5.
+You may use intermediate scores (2 or 4) if the quality falls between the defined anchors (1, 3, 5).
+Provide specific reasoning for your score.
 
 {{criteria_block}}
 
