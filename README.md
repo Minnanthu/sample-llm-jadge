@@ -1,57 +1,57 @@
 # sample-llm-jadge
 
-LLM-as-a-Judge evaluation framework for assessing LLM output quality.
+LLM-as-a-Judge パターンによる LLM 出力品質評価フレームワーク。
 
-## Features
+## 機能
 
-- **3 Use Cases**: Summarization, Report Generation, Report QA
-- **2 Judge Providers**: OpenAI (GPT-4o) and Google Gemini
-- **11 Evaluation Criteria**: 9 core + 2 optional, with 1/3/5 score anchors
-- **Anti-Verbosity Bias**: 3-layer defense (rubric anchors, prompt instructions, mechanical penalty)
-- **Format Gate**: JSON Schema validation of judge responses
-- **CLI**: validate, run, and aggregate commands
+- **3つのユースケース**: 会話要約、レポート生成、レポートQA
+- **2つのJudgeプロバイダ**: OpenAI (GPT-4o) / Google Gemini
+- **11評価観点**: コア9観点 + 任意2観点、1/3/5スコアアンカー付き
+- **反長文バイアス**: 3層防御（ルーブリックアンカー、プロンプト指示、機械的ペナルティ）
+- **Format Gate**: Judge応答のJSON Schemaバリデーション
+- **CLI**: validate / run / aggregate コマンド
 
-## Setup
+## セットアップ
 
 ```bash
 npm install
 cp .env.example .env
-# Edit .env with your API keys
+# .env にAPIキーを設定
 ```
 
-## Usage
+## 使い方
 
-### Validate a request or result
+### リクエスト・結果のバリデーション
 
 ```bash
 npx tsx src/cli.ts validate --json samples/uc1_request.json --schema request
 npx tsx src/cli.ts validate --json samples/uc1_result.json
 ```
 
-### Run evaluation
+### 評価の実行
 
 ```bash
 npx tsx src/cli.ts run --json samples/uc1_request.json --provider openai
 npx tsx src/cli.ts run --json samples/uc1_request.json --provider gemini --output result.json
 ```
 
-### Aggregate results
+### 結果の集約
 
 ```bash
 npx tsx src/cli.ts aggregate samples/uc1_result.json samples/uc2_result.json samples/uc3_result.json
 ```
 
-## Scoring
+## スコアリング
 
-- **Weighted average** across 9 core criteria (weights vary by use case)
-- **Conciseness penalty**: -0.3 when conciseness score ≤ 2 (floor: 1.0)
-- **Pass**: `format_valid AND weighted_score ≥ 3.0`
+- **加重平均**: コア9観点の加重平均（重みはユースケースごとに異なる）
+- **簡潔さペナルティ**: conciseness スコア ≤ 2 の場合 -0.3（下限: 1.0）
+- **合否判定**: `format_valid AND weighted_score ≥ 3.0`
 
-## Testing
+## テスト
 
 ```bash
-npm run test          # All tests
-npm run test:unit     # Unit tests only
-npm run test:e2e      # E2E tests only
-npm run typecheck     # Type checking
+npm run test          # 全テスト実行
+npm run test:unit     # ユニットテストのみ
+npm run test:e2e      # E2Eテストのみ
+npm run typecheck     # 型チェック
 ```

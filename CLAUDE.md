@@ -1,35 +1,35 @@
 # CLAUDE.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+このファイルは Claude Code (claude.ai/code) がこのリポジトリで作業する際のガイダンスを提供します。
 
-## Project Overview
+## プロジェクト概要
 
-LLM-as-a-Judge evaluation framework. Evaluates LLM outputs across 3 use cases (summarization, report generation, report QA) using OpenAI or Gemini as judge models. Features 5-point rubric scoring across 11 criteria, format gate validation, and anti-verbosity bias mechanisms.
+LLM-as-a-Judge 評価フレームワーク。3つのユースケース（会話要約、レポート生成、レポートQA）に対し、OpenAI または Gemini を Judge モデルとして LLM 出力を評価する。11観点の5段階ルーブリック評価、Format Gate バリデーション、反長文バイアス機構を備える。
 
-## Commands
+## コマンド
 
-- `npm run test` — Run all tests (unit, integration, E2E)
-- `npm run typecheck` — TypeScript type checking
-- `npm run build` — Compile TypeScript to dist/
-- `npx tsx src/cli.ts validate --json <file> --schema <request|result>` — Validate JSON
-- `npx tsx src/cli.ts run --json <file> --provider <openai|gemini>` — Run evaluation
-- `npx tsx src/cli.ts aggregate <files...>` — Aggregate results
+- `npm run test` — 全テスト実行（ユニット、インテグレーション、E2E）
+- `npm run typecheck` — TypeScript 型チェック
+- `npm run build` — TypeScript を dist/ にコンパイル
+- `npx tsx src/cli.ts validate --json <file> --schema <request|result>` — JSONバリデーション
+- `npx tsx src/cli.ts run --json <file> --provider <openai|gemini>` — 評価実行
+- `npx tsx src/cli.ts aggregate <files...>` — 結果集約
 
-## Architecture
+## アーキテクチャ
 
-- `src/types/` — TypeScript type definitions
-- `src/schemas/` — JSON Schema validation (Ajv), format gate
-- `src/rubric/` — Criteria definitions, weight presets, prompt builder
-- `src/evaluation/` — Scorer (weighted average + conciseness penalty), runner, aggregator
-- `src/providers/` — BaseJudge abstract class, OpenAI/Gemini implementations, factory
-- `src/commands/` — CLI command handlers
-- `schemas/` — JSON Schema files
-- `rubric/` — Criteria/weights JSON + prompt templates
+- `src/types/` — TypeScript 型定義
+- `src/schemas/` — JSON Schema バリデーション（Ajv）、Format Gate
+- `src/rubric/` — 評価観点定義、重みプリセット、プロンプトビルダー
+- `src/evaluation/` — スコアラー（加重平均 + 簡潔さペナルティ）、ランナー、アグリゲーター
+- `src/providers/` — BaseJudge 抽象クラス、OpenAI/Gemini 実装、ファクトリ
+- `src/commands/` — CLI コマンドハンドラ
+- `schemas/` — JSON Schema ファイル
+- `rubric/` — 評価観点/重み JSON + プロンプトテンプレート
 
-## Key Design Decisions
+## 主要な設計判断
 
-- JSON Schemas use `additionalProperties: false` and `enum` for scores (not min/max) for OpenAI/Gemini compatibility
-- Scoring: weighted average with conciseness penalty (score ≤ 2 → -0.3, floor 1.0)
-- Pass criteria: format_valid AND weighted_score ≥ 3.0 AND format_compliance ≥ 3
-- ESM modules throughout (`"type": "module"` in package.json)
-- All logger output goes to stderr; only structured JSON output goes to stdout
+- JSON Schema は `additionalProperties: false` と `enum` によるスコア定義（min/max ではなく）で OpenAI/Gemini 両対応
+- スコアリング: 加重平均 + 簡潔さペナルティ（score ≤ 2 → -0.3、下限 1.0）
+- 合否判定: format_valid AND weighted_score ≥ 3.0 AND format_compliance ≥ 3
+- 全体を通して ESM モジュール（package.json に `"type": "module"`）
+- ロガー出力は stderr、構造化 JSON 出力のみ stdout
