@@ -1,0 +1,12 @@
+{
+  "request_id": "uc1-sample-001",
+  "task_type": "summarization",
+  "input": {
+    "source_text": "The global semiconductor shortage that began in 2020 has significantly impacted the automotive industry. Major automakers including Toyota, Ford, and General Motors were forced to reduce production, with some plants shutting down temporarily. The shortage was caused by a combination of factors: increased demand for consumer electronics during the pandemic, supply chain disruptions, and the long lead times required to build new fabrication facilities. Industry analysts estimate that the shortage cost automakers approximately $210 billion in lost revenue in 2021 alone. In response, several major automakers have begun investing directly in semiconductor manufacturing partnerships to secure their supply chains.",
+    "instruction": "Summarize the key points of this passage in 2-3 sentences."
+  },
+  "output": {
+    "model_name": "gpt-4o",
+    "generated_text": "The global chip shortage starting in 2020 severely disrupted auto production, costing the industry an estimated $210 billion in 2021. Caused by pandemic-driven electronics demand and supply chain issues, it prompted automakers like Toyota and Ford to cut production. In response, major automakers are now investing directly in semiconductor manufacturing partnerships."
+  }
+}

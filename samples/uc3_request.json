@@ -1,0 +1,13 @@
+{
+  "request_id": "uc3-sample-001",
+  "task_type": "report_qa",
+  "input": {
+    "source_text": "Annual Environmental Impact Report 2024\n\nCarbon Emissions: Our total carbon emissions decreased by 12% year-over-year to 45,000 metric tons CO2e. Scope 1 emissions were 15,000 tons, Scope 2 were 20,000 tons, and Scope 3 were 10,000 tons. The reduction was primarily driven by our transition to renewable energy sources at three manufacturing facilities.\n\nWater Usage: Total water consumption was 2.3 million gallons, a 5% increase due to expansion of our Singapore facility. We recycled 68% of water used in manufacturing processes.\n\nWaste Management: We diverted 82% of waste from landfills through recycling and composting programs. Hazardous waste generation decreased by 18% to 120 tons.",
+    "instruction": "What were the main drivers of carbon emission reduction, and how did Scope 1, 2, and 3 emissions compare?",
+    "reference_output": "The main driver of carbon emission reduction was the transition to renewable energy at three manufacturing facilities. Scope 2 emissions were the largest at 20,000 tons, followed by Scope 1 at 15,000 tons, and Scope 3 at 10,000 tons."
+  },
+  "output": {
+    "model_name": "gpt-4o",
+    "generated_text": "The carbon emission reduction of 12% (to 45,000 metric tons CO2e) was primarily driven by transitioning three manufacturing facilities to renewable energy sources. By scope: Scope 2 (indirect energy) was largest at 20,000 tons, Scope 1 (direct) was 15,000 tons, and Scope 3 (value chain) was 10,000 tons."
+  }
+}

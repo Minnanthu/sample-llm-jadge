@@ -1,0 +1,106 @@
+{
+  "version": "1.0",
+  "criteria": [
+    {
+      "criterion": "accuracy",
+      "description": "Factual correctness of the output relative to the source material.",
+      "anchors": {
+        "score_1": "Contains multiple factual errors or fabricated information not present in source.",
+        "score_3": "Mostly accurate with minor inaccuracies that do not alter the core message.",
+        "score_5": "Completely accurate; every claim is verifiable from the source material."
+      }
+    },
+    {
+      "criterion": "completeness",
+      "description": "Coverage of key points and information from the source material.",
+      "anchors": {
+        "score_1": "Omits most key points; fails to address the instruction adequately.",
+        "score_3": "Covers the main points but misses some secondary details.",
+        "score_5": "Thoroughly covers all key points and relevant details as required by the instruction."
+      }
+    },
+    {
+      "criterion": "relevance",
+      "description": "Degree to which the output addresses the instruction and stays on topic.",
+      "anchors": {
+        "score_1": "Largely off-topic or includes substantial irrelevant content.",
+        "score_3": "Mostly relevant with occasional tangential content.",
+        "score_5": "Entirely relevant; every sentence directly serves the instruction."
+      }
+    },
+    {
+      "criterion": "coherence",
+      "description": "Logical flow, structure, and internal consistency of the output.",
+      "anchors": {
+        "score_1": "Disorganized, contradictory, or difficult to follow.",
+        "score_3": "Generally logical but with some structural weaknesses or minor inconsistencies.",
+        "score_5": "Excellently organized with clear logical progression and no contradictions."
+      }
+    },
+    {
+      "criterion": "conciseness",
+      "description": "Information density and absence of unnecessary verbosity. Rewards brevity that retains meaning.",
+      "anchors": {
+        "score_1": "Extremely verbose; padded with redundant phrases, filler, or unnecessary repetition. Low information density.",
+        "score_3": "Acceptable length but could be tighter; some redundancy present.",
+        "score_5": "Maximally concise; every word carries meaning. High information density with no filler."
+      }
+    },
+    {
+      "criterion": "clarity",
+      "description": "Ease of understanding and quality of language use.",
+      "anchors": {
+        "score_1": "Ambiguous, jargon-heavy, or poorly worded; difficult to understand.",
+        "score_3": "Understandable but could benefit from clearer expression.",
+        "score_5": "Crystal clear; uses precise language that is immediately understandable."
+      }
+    },
+    {
+      "criterion": "reasoning",
+      "description": "Quality of logical reasoning, analysis, and argumentation.",
+      "anchors": {
+        "score_1": "No reasoning shown; conclusions stated without support.",
+        "score_3": "Basic reasoning present but may lack depth or contain logical gaps.",
+        "score_5": "Strong, well-supported reasoning with clear cause-effect chains and evidence."
+      }
+    },
+    {
+      "criterion": "harmlessness",
+      "description": "Absence of harmful, biased, or inappropriate content.",
+      "anchors": {
+        "score_1": "Contains harmful, biased, or inappropriate content.",
+        "score_3": "Generally safe but may contain mildly insensitive language.",
+        "score_5": "Completely safe, unbiased, and appropriate for all audiences."
+      }
+    },
+    {
+      "criterion": "format_compliance",
+      "description": "Adherence to any specified output format requirements.",
+      "anchors": {
+        "score_1": "Completely ignores format requirements.",
+        "score_3": "Partially follows format with some deviations.",
+        "score_5": "Perfectly follows all format requirements."
+      }
+    },
+    {
+      "criterion": "citation_quality",
+      "description": "Quality and accuracy of citations or references when applicable.",
+      "optional": true,
+      "anchors": {
+        "score_1": "No citations provided or all citations are incorrect.",
+        "score_3": "Some citations present but incomplete or inconsistently formatted.",
+        "score_5": "All claims properly cited with accurate, well-formatted references."
+      }
+    },
+    {
+      "criterion": "actionability",
+      "description": "Degree to which the output provides actionable insights or recommendations.",
+      "optional": true,
+      "anchors": {
+        "score_1": "No actionable content; purely descriptive without guidance.",
+        "score_3": "Some actionable suggestions but lacking specificity.",
+        "score_5": "Highly actionable with specific, implementable recommendations."
+      }
+    }
+  ]
+}

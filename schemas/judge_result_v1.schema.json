@@ -1,0 +1,59 @@
+{
+  "title": "JudgeResult",
+  "type": "object",
+  "definitions": {
+    "score_value": {
+      "type": "integer",
+      "enum": [1, 2, 3, 4, 5]
+    },
+    "criterion_name": {
+      "type": "string",
+      "enum": [
+        "accuracy",
+        "completeness",
+        "relevance",
+        "coherence",
+        "conciseness",
+        "clarity",
+        "reasoning",
+        "harmlessness",
+        "format_compliance",
+        "citation_quality",
+        "actionability"
+      ]
+    },
+    "criterion_score": {
+      "type": "object",
+      "properties": {
+        "criterion": { "$ref": "#/definitions/criterion_name" },
+        "score": { "$ref": "#/definitions/score_value" },
+        "reasoning": { "type": "string", "minLength": 1 }
+      },
+      "required": ["criterion", "score", "reasoning"],
+      "additionalProperties": false
+    }
+  },
+  "properties": {
+    "request_id": { "type": "string", "minLength": 1 },
+    "judge_model": { "type": "string", "minLength": 1 },
+    "scores": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/criterion_score" },
+      "minItems": 9
+    },
+    "overall": {
+      "type": "object",
+      "properties": {
+        "weighted_score": { "type": "number", "minimum": 1.0, "maximum": 5.0 },
+        "pass": { "type": "boolean" },
+        "conciseness_penalty_applied": { "type": "boolean" }
+      },
+      "required": ["weighted_score", "pass", "conciseness_penalty_applied"],
+      "additionalProperties": false
+    },
+    "format_valid": { "type": "boolean" },
+    "raw_response": { "type": "string" }
+  },
+  "required": ["request_id", "judge_model", "scores", "overall", "format_valid"],
+  "additionalProperties": false
+}

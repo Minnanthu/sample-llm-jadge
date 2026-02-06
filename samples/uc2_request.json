@@ -1,0 +1,12 @@
+{
+  "request_id": "uc2-sample-001",
+  "task_type": "report_generation",
+  "input": {
+    "source_text": "Q3 2024 Sales Data:\n- Product A: Revenue $2.1M (up 15% YoY), Units sold: 12,000\n- Product B: Revenue $1.8M (down 5% YoY), Units sold: 9,500\n- Product C: Revenue $3.2M (up 28% YoY), Units sold: 18,000\n- Total headcount: 45 sales reps\n- Customer acquisition cost: $250 per customer\n- Customer churn rate: 8%\n- NPS score: 72",
+    "instruction": "Generate a brief executive summary report highlighting key trends, risks, and recommendations based on this Q3 sales data."
+  },
+  "output": {
+    "model_name": "gpt-4o",
+    "generated_text": "## Q3 2024 Executive Summary\n\n**Key Trends:** Total revenue reached $7.1M across three product lines. Product C led growth at +28% YoY ($3.2M), while Product A showed healthy +15% growth. Product B declined 5% YoY, warranting investigation.\n\n**Risks:** Product B's declining revenue signals potential market fit issues. The 8% churn rate, if sustained, could erode the customer base significantly over the next year.\n\n**Recommendations:**\n1. Investigate Product B's decline — conduct customer feedback analysis\n2. Leverage Product C's momentum with increased marketing investment\n3. Implement churn reduction program targeting the 8% rate\n4. Evaluate sales rep productivity ($158K revenue per rep) against industry benchmarks"
+  }
+}

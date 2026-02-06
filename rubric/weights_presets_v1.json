@@ -1,0 +1,44 @@
+{
+  "version": "1.0",
+  "conciseness_penalty": {
+    "threshold": 2,
+    "penalty": 0.3,
+    "floor": 1.0
+  },
+  "pass_threshold": 3.0,
+  "presets": {
+    "summarization": {
+      "accuracy": 0.15,
+      "completeness": 0.10,
+      "relevance": 0.10,
+      "coherence": 0.10,
+      "conciseness": 0.20,
+      "clarity": 0.10,
+      "reasoning": 0.05,
+      "harmlessness": 0.10,
+      "format_compliance": 0.10
+    },
+    "report_generation": {
+      "accuracy": 0.15,
+      "completeness": 0.15,
+      "relevance": 0.10,
+      "coherence": 0.15,
+      "conciseness": 0.10,
+      "clarity": 0.10,
+      "reasoning": 0.10,
+      "harmlessness": 0.05,
+      "format_compliance": 0.10
+    },
+    "report_qa": {
+      "accuracy": 0.20,
+      "completeness": 0.10,
+      "relevance": 0.15,
+      "coherence": 0.10,
+      "conciseness": 0.10,
+      "clarity": 0.10,
+      "reasoning": 0.15,
+      "harmlessness": 0.05,
+      "format_compliance": 0.05
+    }
+  }
+}

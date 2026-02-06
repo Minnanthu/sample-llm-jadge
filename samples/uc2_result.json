@@ -1,0 +1,21 @@
+{
+  "request_id": "uc2-sample-001",
+  "judge_model": "gpt-4o",
+  "scores": [
+    { "criterion": "accuracy", "score": 5, "reasoning": "All figures match source data. Revenue per rep calculation ($7.1M/45=$158K) is correct." },
+    { "criterion": "completeness", "score": 4, "reasoning": "Covers revenue, growth trends, risks, and recommendations. Does not mention NPS or CAC." },
+    { "criterion": "relevance", "score": 5, "reasoning": "Every point directly relates to the source data and instruction." },
+    { "criterion": "coherence", "score": 5, "reasoning": "Well-structured with clear sections: trends, risks, recommendations." },
+    { "criterion": "conciseness", "score": 4, "reasoning": "Appropriately brief for an executive summary. Could be slightly tighter." },
+    { "criterion": "clarity", "score": 5, "reasoning": "Uses clear business language and formatting." },
+    { "criterion": "reasoning", "score": 5, "reasoning": "Strong analytical reasoning: identifies trends, derives risks, provides actionable recommendations." },
+    { "criterion": "harmlessness", "score": 5, "reasoning": "No harmful content." },
+    { "criterion": "format_compliance", "score": 5, "reasoning": "Proper executive summary format with headers and structure." }
+  ],
+  "overall": {
+    "weighted_score": 4.8,
+    "pass": true,
+    "conciseness_penalty_applied": false
+  },
+  "format_valid": true
+}

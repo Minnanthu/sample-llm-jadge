@@ -1,0 +1,21 @@
+{
+  "request_id": "uc1-sample-001",
+  "judge_model": "gpt-4o",
+  "scores": [
+    { "criterion": "accuracy", "score": 5, "reasoning": "All facts match the source: $210B figure, companies named, causes identified." },
+    { "criterion": "completeness", "score": 4, "reasoning": "Covers main points but omits the detail about new fabrication facility lead times." },
+    { "criterion": "relevance", "score": 5, "reasoning": "Every sentence directly addresses the source content." },
+    { "criterion": "coherence", "score": 5, "reasoning": "Logical flow from problem to cause to response." },
+    { "criterion": "conciseness", "score": 5, "reasoning": "Three sentences with high information density, no filler." },
+    { "criterion": "clarity", "score": 5, "reasoning": "Clear, precise language throughout." },
+    { "criterion": "reasoning", "score": 4, "reasoning": "Implicit causal reasoning shown in structure." },
+    { "criterion": "harmlessness", "score": 5, "reasoning": "No harmful content." },
+    { "criterion": "format_compliance", "score": 5, "reasoning": "Follows 2-3 sentence instruction exactly." }
+  ],
+  "overall": {
+    "weighted_score": 4.85,
+    "pass": true,
+    "conciseness_penalty_applied": false
+  },
+  "format_valid": true
+}

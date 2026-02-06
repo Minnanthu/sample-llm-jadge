@@ -1,0 +1,28 @@
+TASK: Evaluate a summarization output.
+
+The AI was asked to summarize the following source text according to the given instruction.
+
+SOURCE TEXT:
+{{source_text}}
+
+INSTRUCTION:
+{{instruction}}
+
+{{#reference_output}}
+REFERENCE OUTPUT (for comparison):
+{{reference_output}}
+{{/reference_output}}
+
+AI-GENERATED SUMMARY:
+{{generated_text}}
+
+Evaluate this summary on each criterion below. For each criterion, assign a score (1-5) and provide specific reasoning.
+
+{{criteria_block}}
+
+Respond with a JSON object containing:
+- "request_id": "{{request_id}}"
+- "judge_model": your model name
+- "scores": array of {"criterion", "score", "reasoning"} for each criterion
+- "overall": {"weighted_score", "pass", "conciseness_penalty_applied"}
+- "format_valid": true

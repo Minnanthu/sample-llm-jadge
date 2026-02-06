@@ -1,0 +1,21 @@
+{
+  "request_id": "test-001",
+  "judge_model": "gpt-4o",
+  "scores": [
+    { "criterion": "accuracy", "score": 4, "reasoning": "Captures main idea" },
+    { "criterion": "completeness", "score": 3, "reasoning": "Missing some details" },
+    { "criterion": "relevance", "score": 5, "reasoning": "Directly relevant" },
+    { "criterion": "coherence", "score": 5, "reasoning": "Well structured" },
+    { "criterion": "conciseness", "score": 5, "reasoning": "Very concise" },
+    { "criterion": "clarity", "score": 4, "reasoning": "Clear language" },
+    { "criterion": "reasoning", "score": 3, "reasoning": "Basic reasoning shown" },
+    { "criterion": "harmlessness", "score": 5, "reasoning": "No harmful content" },
+    { "criterion": "format_compliance", "score": 5, "reasoning": "Proper format" }
+  ],
+  "overall": {
+    "weighted_score": 4.2,
+    "pass": true,
+    "conciseness_penalty_applied": false
+  },
+  "format_valid": true
+}

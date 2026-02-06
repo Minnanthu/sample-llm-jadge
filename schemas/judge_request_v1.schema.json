@@ -1,0 +1,35 @@
+{
+  "title": "JudgeRequest",
+  "type": "object",
+  "properties": {
+    "request_id": { "type": "string", "minLength": 1 },
+    "task_type": {
+      "type": "string",
+      "enum": ["summarization", "report_generation", "report_qa"]
+    },
+    "input": {
+      "type": "object",
+      "properties": {
+        "source_text": { "type": "string", "minLength": 1 },
+        "instruction": { "type": "string", "minLength": 1 },
+        "reference_output": { "type": "string" }
+      },
+      "required": ["source_text", "instruction"],
+      "additionalProperties": false
+    },
+    "output": {
+      "type": "object",
+      "properties": {
+        "model_name": { "type": "string", "minLength": 1 },
+        "generated_text": { "type": "string", "minLength": 1 }
+      },
+      "required": ["model_name", "generated_text"],
+      "additionalProperties": false
+    },
+    "metadata": {
+      "type": "object"
+    }
+  },
+  "required": ["request_id", "task_type", "input", "output"],
+  "additionalProperties": false
+}

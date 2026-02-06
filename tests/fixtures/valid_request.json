@@ -1,0 +1,12 @@
+{
+  "request_id": "test-001",
+  "task_type": "summarization",
+  "input": {
+    "source_text": "The quick brown fox jumps over the lazy dog. This is a test document with multiple sentences that should be summarized.",
+    "instruction": "Summarize the following text in one sentence."
+  },
+  "output": {
+    "model_name": "gpt-4o",
+    "generated_text": "A fox jumps over a dog."
+  }
+}

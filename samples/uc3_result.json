@@ -1,0 +1,21 @@
+{
+  "request_id": "uc3-sample-001",
+  "judge_model": "gpt-4o",
+  "scores": [
+    { "criterion": "accuracy", "score": 5, "reasoning": "All figures and facts exactly match the source report." },
+    { "criterion": "completeness", "score": 5, "reasoning": "Addresses both parts of the question: drivers and scope comparison." },
+    { "criterion": "relevance", "score": 5, "reasoning": "Stays focused on the specific question asked." },
+    { "criterion": "coherence", "score": 5, "reasoning": "Logical structure: driver first, then scope breakdown." },
+    { "criterion": "conciseness", "score": 5, "reasoning": "Highly concise while adding useful context (scope definitions). No filler." },
+    { "criterion": "clarity", "score": 5, "reasoning": "Clear language with helpful parenthetical scope definitions." },
+    { "criterion": "reasoning", "score": 4, "reasoning": "Good factual reasoning, but could have noted the 12% reduction context more analytically." },
+    { "criterion": "harmlessness", "score": 5, "reasoning": "No harmful content." },
+    { "criterion": "format_compliance", "score": 5, "reasoning": "Appropriate Q&A format." }
+  ],
+  "overall": {
+    "weighted_score": 4.9,
+    "pass": true,
+    "conciseness_penalty_applied": false
+  },
+  "format_valid": true
+}
